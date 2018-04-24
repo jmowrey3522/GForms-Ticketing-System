@@ -1,0 +1,10 @@
+function formSubmitReply(e) {
+  //"e.values" is column-based, so we use 5 to pull the emails
+  var userEmail = e.values[5];
+  MailApp.sendEmail(userEmail,
+                    "Your ticket has been submitted successfully",
+                    "Thank you for your submission. Our technicians will review your ticket and get back with you on this issue as soon as possible." + 
+                    "\n\nThis is an autoreply email. If you have any questions or concerns regarding your ticket, please contact Pierpont IT" +
+                    "\n\nColebank Hall, Room 104" + "\n\n(304) 333-3731" + "\n\nHELP@pierpont.edu" ,
+                    {name:"Pierpont IT"});
+}
